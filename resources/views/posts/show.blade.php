@@ -9,7 +9,7 @@
             <b>{{$post->title}}</b>
         </h1>
         <hr>
-        <p>{{$post->body}}</p>
+        <p>{!!$post->body!!}</p>
         <small>{{$post->created_at}}</small>
     </div>
 </div>

@@ -18,10 +18,9 @@
                     <small>{{$post->created_at}}</small>
                 </div>
             </div>
-            {{$posts->links()}}
-
         @endforeach
-
+        {{$posts->links()}}
+        
     @else
 
         <p>No posts found</p>

@@ -18,7 +18,7 @@
 
 <div class="card" style="width: 50rem;">
     <div class="card-body">
-        <h1><b>{!! someVar !!}</b></h1>
+        <h1><b>{ !!someVar!! }</b></h1>
         <p>used to parse html elements that's returned in the someVar variable </p>
     </div>
 </div>

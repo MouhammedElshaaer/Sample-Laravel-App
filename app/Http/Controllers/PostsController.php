@@ -22,7 +22,8 @@ class PostsController extends Controller
         // $posts=Post::orderBy('title','desc')->take(1)->get();    //take the first result
         // $posts=Post::orderBy('title','desc')->get();
 
-        $posts=Post::orderBy('created_at','desc')->paginate(2);
+        $posts=Post::orderBy('created_at','desc')->paginate(2); 
+        //don't forget to add {{$posts->links()}} after the foreach loop in order to make the paginate() work.
         return view('posts.index')->with('posts',$posts);
     }
 
@@ -73,6 +74,7 @@ class PostsController extends Controller
         $post->user_id = auth()->user()->id;
         $post->cover_image= $fileNameToStore;
         $post->save();
+
 
         return redirect('/posts')->with('success', 'Post Created');
     }
